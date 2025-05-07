@@ -3,6 +3,10 @@ package org.example.word.breaker;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * this class provides a common break work method, subclasses only need to
+ * implement the isValidWord method to break sentence according to different situations
+ */
 public abstract class AbstractWordBreaker implements WordBreaker {
     @Override
     public List<String> breakWord(String input) {

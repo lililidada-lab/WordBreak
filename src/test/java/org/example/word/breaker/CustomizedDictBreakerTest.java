@@ -42,5 +42,8 @@ public class CustomizedDictBreakerTest {
         List<String> resultTwo = breaker.breakWord(testCaseTwo);
         resultTwo.sort(String::compareTo);
         Assert.assertEquals(expectResultTwo, resultTwo);
+
+        String invalidCase = null;
+        Assert.assertTrue(breaker.breakWord(invalidCase).isEmpty());
     }
 }

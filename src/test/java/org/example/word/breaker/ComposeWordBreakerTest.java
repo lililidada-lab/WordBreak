@@ -46,5 +46,8 @@ public class ComposeWordBreakerTest {
         List<String> result = breaker.breakWord(testCase);
         result.sort(String::compareTo);
         Assert.assertEquals(expectResult, result);
+
+        String invalidCase = null;
+        Assert.assertTrue(breaker.breakWord(invalidCase).isEmpty());
     }
 }

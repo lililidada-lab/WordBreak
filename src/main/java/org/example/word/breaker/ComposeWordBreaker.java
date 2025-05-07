@@ -11,6 +11,7 @@ public class ComposeWordBreaker extends AbstractWordBreaker {
 
     @Override
     public boolean isValidWord(String word) {
+        // if anyone breaker contain this word return true, otherwise return false
         for (WordBreaker breaker : breakers) {
             if (breaker.isValidWord(word)) {
                 return true;

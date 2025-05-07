@@ -50,5 +50,9 @@ public class WordBreakersTest {
         List<String> result = WordBreakers.breakWordWithBothDict(testCase, customizedDict);
         result.sort(String::compareTo);
         Assert.assertEquals(expectResult, result);
+
+        String invalidCase = "     ";
+        List<String> resultTwo = WordBreakers.breakWordWithBothDict(invalidCase, customizedDict);
+        Assert.assertTrue(resultTwo.isEmpty());
     }
 }

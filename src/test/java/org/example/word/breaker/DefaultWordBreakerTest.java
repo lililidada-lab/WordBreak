@@ -36,5 +36,8 @@ public class DefaultWordBreakerTest {
         List<String> expectResultTwo = List.of("i like ice cream and mango");
         List<String> resultTwo = breaker.breakWord(caseTwo);
         Assert.assertEquals(expectResultTwo, resultTwo);
+
+        String invalidCase = null;
+        Assert.assertTrue(breaker.breakWord(invalidCase).isEmpty());
     }
 }
